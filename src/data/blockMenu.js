@@ -1,0 +1,20 @@
+export const blocks = [
+  { id: 1, name: "About", link: "/docs/blocks/about" },
+  { id: 2, name: "Blog", link: "/docs/blocks/blog" },
+  { id: 3, name: "Call to Action", link: "/docs/blocks/call-to-action" },
+  { id: 4, name: "Clients", link: "/docs/blocks/clients" },
+  { id: 5, name: "Contact", link: "/docs/blocks/contact" },
+  { id: 6, name: "Facts", link: "/docs/blocks/facts" },
+  { id: 7, name: "FAQ", link: "/docs/blocks/faq" },
+  { id: 8, name: "Features", link: "/docs/blocks/features" },
+  { id: 9, name: "Footer", link: "/docs/blocks/footer" },
+  { id: 10, name: "Hero", link: "/docs/blocks/hero" },
+  { id: 11, name: "Misc", link: "/docs/blocks/misc" },
+  { id: 12, name: "Navbar", link: "/docs/blocks/navbar" },
+  { id: 13, name: "Portfolio", link: "/docs/blocks/portfolio" },
+  { id: 14, name: "Pricing", link: "/docs/blocks/pricing" },
+  { id: 15, name: "Process", link: "/docs/blocks/process" },
+  { id: 16, name: "Team", link: "/docs/blocks/team" },
+  { id: 17, name: "Testimonials", link: "/docs/blocks/testimonials" },
+  // Add more blocks as needed
+];
