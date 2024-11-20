@@ -12,8 +12,8 @@
           ></div>
           <figure class="rounded">
             <img
-              src="/assets/img/photos/about4.jpg"
-              srcset="/assets/img/photos/about4@2x.jpg 2x"
+              src="/assets/img/photos/g11.jpg"
+              srcset="/assets/img/photos/g11@2x.jpg 2x"
               alt="photo"
             />
           </figure>
@@ -26,7 +26,7 @@
             alt="photo"
           />
           <h2 class="display-4 mb-8">
-            Convinced yet? Let's make something great together.
+            Reach Out and Connect.
           </h2>
           <div
             v-for="item in contactInfo"

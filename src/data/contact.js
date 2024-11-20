@@ -4,7 +4,7 @@ export const contactInfo = [
     iconClass: "uil uil-location-pin-alt",
     title: "Address",
     address: {
-      line1: "orncliffe Greenview Community Association 5600 Centre Street North, Calgary, AB T2K 0T3,",
+      line1: "Thorncliffe Greenview Community Association 5600 Centre Street North, Calgary, AB T2K 0T3,",
       line2: " Canada.",
     },
   },

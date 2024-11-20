@@ -10,8 +10,8 @@
       </div>
     </section>
     <HomesHome15Team />
-    <HomesHome15Count />
-    <HomesHome15Contact />
+<!--     <HomesHome15Count />
+ -->    <HomesHome15Contact />
   </div>
   <FootersFooter25 />
 </template>
