@@ -2,6 +2,7 @@
   <div class="content-wrapper">
     <HeadersHeader1 />
     <PageHeader
+      data-aos="fade-up"
       title="Leadership"
       description="At RCCG City of David, we believe that we are better together. Our staff has a blast serving Jesus, His people, and each other. Let us know how we can help you grow in your relationships, develop your gifts, and find success in your life."
     />
@@ -12,6 +13,8 @@
         <div class="grid grid-view projects-masonry">
           <div class="row gx-md-8 gy-10 gy-md-13 isotope">
             <div
+              data-aos="fade-up"
+              :data-aos-delay="i * 50"
               v-for="(project, i) in teamMembers3"
               :key="project.id"
               class="project item col-md-6 col-xl-4"
@@ -33,7 +36,9 @@
                 class="project-details d-flex justify-content-center flex-column"
               >
                 <div class="post-header">
-                  <h2 class="post-title text-purple h3 fs-20 my-0">{{ project.name }}</h2>
+                  <h2 class="post-title text-purple h3 fs-20 my-0">
+                    {{ project.name }}
+                  </h2>
                   <p class="post-category my-0 text-ash">
                     {{ project.position }}
                   </p>

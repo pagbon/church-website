@@ -23,7 +23,9 @@
         ></div>
         <div class="row gx-md-5 gy-5">
           <div
-            v-for="service in services"
+            data-aos="fade-up"
+            :data-aos-delay="i * 50"
+            v-for="(service, i) in services"
             :key="service.id"
             class="col-md-6 col-xl-6 d-flex align-items-stretch"
           >
@@ -37,13 +39,22 @@
                 />
                 <h4 class="text-purple fw-bolder fs-22">{{ service.title }}</h4>
                 <p class="mb-2 fs-13">{{ service.description }}</p>
-                <p v-if="service.description2" class="mb-2 fs-13 fw-bolder text-black">
+                <p
+                  v-if="service.description2"
+                  class="mb-2 fs-13 fw-bolder text-black"
+                >
                   {{ service.description2 }}
                 </p>
-                <p v-if="service.description3" class="mb-2 fs-13 fw-bolder text-black">
+                <p
+                  v-if="service.description3"
+                  class="mb-2 fs-13 fw-bolder text-black"
+                >
                   {{ service.description3 }}
                 </p>
-                <p v-if="service.description4" class="mb-2 fs-13 fw-bolder text-black">
+                <p
+                  v-if="service.description4"
+                  class="mb-2 fs-13 fw-bolder text-black"
+                >
                   {{ service.description4 }}
                 </p>
                 <p class="mb-2 fs-13">{{ service.description5 }}</p>

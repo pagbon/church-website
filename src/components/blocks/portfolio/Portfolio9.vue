@@ -1,19 +1,10 @@
 <template>
   <section id="snippet-9" class="wrapper bg-light wrapper-border">
-    <div class="container  text-center">
-      <div class="row">
-        <div class="col-lg-10 col-xl-8 col-xxl-7 mx-auto mb-8">
-         <!--  <h2 class="display-5 mb-3">My Selected Shots</h2>
-          <p class="lead fs-lg">
-            Photography is my passion and I love to turn ideas into beautiful
-            things.
-          </p> -->
-        </div> 
-      </div>
+    <div class="container text-center">
       <!-- /.row -->
-      <div class="grid grid-view projects-masonry">
-        <div class="isotope-filter filter mb-10">
-           <ul>
+      <div class="grid grid-view projects-masonry mt-7">
+        <div class="isotope-filter filter mb-10" data-aos="fade-up">
+          <ul>
             <li
               v-for="filter in filters"
               @click="() => updateCategory(filter.value)"
@@ -26,9 +17,9 @@
                 >{{ filter.label }}</a
               >
             </li>
-          </ul> 
+          </ul>
         </div>
-        <div class="row gx-md-6 gy-6 isotope" ref="isotopeContainer">
+        <div class="row gx-md-6 gy-6 isotope" ref="isotopeContainer" data-aos="fade-up">
           <div
             v-for="(project, i) in filteredItems"
             :key="project.id"
@@ -277,8 +268,9 @@ const filters = [
   { id: 2, label: "Worship Moment", value: "worship" },
   { id: 3, label: "Sermon Moment", value: "Sermon" },
   { id: 4, label: "Prayer MOment", value: "Prayer" },
-/*   { id: 5, label: "After Service", value: "AfterService" },
- */];
+  /*   { id: 5, label: "After Service", value: "AfterService" },
+   */
+];
 const currentCategory = ref("*");
 const filteredItems = ref(projects7);
 const updateCategory = (val) => {

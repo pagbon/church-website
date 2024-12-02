@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { routes } from "./routes";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -7,6 +9,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
+  AOS.init(); // Initialize AOS
   document.title = to.meta.title;
   next();
 

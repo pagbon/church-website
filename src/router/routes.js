@@ -52,17 +52,8 @@ export const routes = [
     meta: {
       title: "Contact || Sandbox - Modern & Multipurpose Vue 3 Template",
     },
-   },
-
-  // old
-  {
-    path: "/404",
-    name: "404",
-    component: () => import("@/pages/404/index.vue"),
-    meta: {
-      title: "Page Not Found || Sandbox - Modern & Multipurpose Vue 3 Template",
-    },
   },
+
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
@@ -70,5 +61,5 @@ export const routes = [
     meta: {
       title: "Page Not Found || Sandbox - Modern & Multipurpose Vue 3 Template",
     },
-  }, 
+  },
 ];

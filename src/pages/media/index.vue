@@ -3,25 +3,23 @@
     <!-- -->
     <HeadersHeader1 />
     <PageHeader
-    title="Media"
-    description="Explore our library of sermons, worship music, and community moments."
-  />
-  <BlocksPortfolioPortfolio9 />
-  <FootersFooter25 />
-
+      data-aos="fade-up"
+      title="Media"
+      description="Explore our library of sermons, worship music, and community moments."
+    />
+    <BlocksPortfolioPortfolio9 data-aos="fade-up" />
+    <FootersFooter25 data-aos="fade-up" />
   </div>
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 export default {
   setup() {
     const feature = ref();
 
-    return {
-      
-    };
+    return {};
   },
 };
 </script>
