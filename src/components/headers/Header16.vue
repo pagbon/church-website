@@ -75,10 +75,11 @@
         <div class="navbar-other w-100 d-flex ms-auto">
           <ul class="navbar-nav flex-row align-items-center ms-auto">
             <li class="nav-item d-md-block">
-              <router-link
-                to="/give-online"
+              <a
                 class="btn btn-sm btn-yellow rounded-pill"
-                >Give Online</router-link
+                target="_blank"
+                href="https://give.tithe.ly/?formId=c250ec60-6865-11ee-90fc-1260ab546d11&kiosk=true"
+                >Give Online</a
               >
             </li>
             <li class="nav-item d-lg-none">
