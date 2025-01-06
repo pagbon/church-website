@@ -110,7 +110,7 @@ export const teamMembers3 = [
     avatarSrc: "/assets/img/avatars/t1.png",
     avatarSrcset: "/assets/img/avatars/t1@2x.png 2x",
     name: "Dr Olusoji Adewole",
-    position: "Bible Study",
+    position: "Teaching & Bible Study",
     description: "",
     socialLinks: [
       {
@@ -130,6 +130,20 @@ export const teamMembers3 = [
       {
         iconClass: "uil uil-envelope",
         link: "men@rccgcityofdavidcagary.com",
+      },
+    ],
+  },
+  {
+    id: 22,
+    avatarSrc: "/assets/img/avatars/t2.png",
+    avatarSrcset: "/assets/img/avatars/t2@2x.png 2x",
+    name: "Bro Dayo Akinduro",
+    position: "Young Adult (Youth)",
+    description: "",
+    socialLinks: [
+      {
+        iconClass: "uil uil-envelope",
+        link: "youth@rccgcityofdavidcagary.com",
       },
     ],
   },
@@ -162,10 +176,24 @@ export const teamMembers3 = [
     ],
   },
   {
-    id: 5,
-    avatarSrc: "/assets/img/avatars/t5.png",
-    avatarSrcset: "/assets/img/avatars/t5@2x.png 2x",
-    name: "Bro Olumide Adeniji",
+    id: 43,
+    avatarSrc: "/assets/img/avatars/t4.png",
+    avatarSrcset: "/assets/img/avatars/t4@2x.png 2x",
+    name: "Bro Taofeek Olayinka",
+    position: "Drama",
+    description: "",
+    socialLinks: [
+      {
+        iconClass: "uil uil-envelope",
+        link: "drama@rccgcityofdavidcagary.com",
+      },
+    ],
+  },
+  {
+    id: 54,
+    avatarSrc: "/assets/img/avatars/t4.png",
+    avatarSrcset: "/assets/img/avatars/t4@2x.png 2x",
+    name: "Bro Taofeek Olayinka",
     position: "Technical",
     description: "",
     socialLinks: [
@@ -176,16 +204,30 @@ export const teamMembers3 = [
     ],
   },
   {
-    id: 6,
-    avatarSrc: "/assets/img/avatars/t6.png",
-    avatarSrcset: "/assets/img/avatars/t6@2x.png 2x",
-    name: "Sis Aderonke Adewole",
-    position: "Office & Admin",
+    id: 5,
+    avatarSrc: "/assets/img/avatars/t5.png",
+    avatarSrcset: "/assets/img/avatars/t5@2x.png 2x",
+    name: "Bro Olumide Adeniji",
+    position: "Sunday School",
     description: "",
     socialLinks: [
       {
         iconClass: "uil uil-envelope",
-        link: "office@rccgcityofdavidcagary.com",
+        link: "sundayschool@rccgcityofdavidcagary.com",
+      },
+    ],
+  },
+  {
+    id: 6,
+    avatarSrc: "/assets/img/avatars/t6.png",
+    avatarSrcset: "/assets/img/avatars/t6@2x.png 2x",
+    name: "Sis. Aderonke Adewole",
+    position: "Finance & Administration",
+    description: "",
+    socialLinks: [
+      {
+        iconClass: "uil uil-envelope",
+        link: "admin@rccgcityofdavidcagary.com",
       },
     ],
   },
@@ -204,11 +246,25 @@ export const teamMembers3 = [
     ],
   },
   {
+    id: 74,
+    avatarSrc: "/assets/img/avatars/t7.jpg",
+    avatarSrcset: "/assets/img/avatars/t7@2x.jpg 2x",
+    name: "Bro Chidom Otogwu",
+    position: "Prayer",
+    description: "",
+    socialLinks: [
+      {
+        iconClass: "uil uil-envelope",
+        link: "prayer@rccgcityofdavidcagary.com",
+      },
+    ],
+  },
+  {
     id: 8,
     avatarSrc: "/assets/img/avatars/t8.jpg",
     avatarSrcset: "/assets/img/avatars/t8@2x.jpg 2x",
     name: "Sis Joy Agbongiator",
-    position: "Welcome",
+    position: "Welcome & Follow up",
     description: "",
     socialLinks: [
       {

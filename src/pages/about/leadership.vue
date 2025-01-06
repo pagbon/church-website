@@ -17,7 +17,7 @@
               :data-aos-delay="i * 50"
               v-for="(project, i) in teamMembers3"
               :key="project.id"
-              class="project item col-md-6 col-xl-4"
+              class="project item col-md-6 col-xl-3"
             >
               <figure class="rounded mb-6">
                 <img
