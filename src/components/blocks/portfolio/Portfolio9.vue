@@ -19,7 +19,11 @@
             </li>
           </ul>
         </div>
-        <div class="row gx-md-6 gy-6 isotope" ref="isotopeContainer" data-aos="fade-up">
+        <div
+          class="row gx-md-6 gy-6 isotope"
+          ref="isotopeContainer"
+          data-aos="fade-up"
+        >
           <div
             v-for="(project, i) in filteredItems"
             :key="project.id"

@@ -43,12 +43,12 @@
               1200: { slidesPerView: 4.5 },
             }"
           >
-            <SwiperSlide v-for="(item, i) in 20" :key="i">
+            <SwiperSlide v-for="(item, i) in imageArray" :key="i">
               <div class="item-inner">
                 <img
+                  :src="item.image.src"
                   style="height: 350px; object-fit: cover"
                   class="img-fluid rounded"
-                  :src="`/assets/img/gallery/${i + 1}.jpg`"
                   alt="photo"
                 />
               </div>
@@ -75,6 +75,19 @@
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Autoplay } from "swiper/modules";
+import { projects7 } from "@/data/projects";
+import { ref, onMounted } from "vue";
+
+const imageArray = ref([]);
+
+function getRandomObjectsAlt(array, count = 10) {
+  return array
+    .sort(() => Math.random() - 0.5)
+    .slice(0, Math.min(count, array.length));
+}
+onMounted(() => {
+  imageArray.value = getRandomObjectsAlt(projects7, 10);
+});
 </script>
 
 <style lang="scss" scoped></style>

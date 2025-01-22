@@ -12,7 +12,7 @@
             <div class="col-md-6">
               <figure class="rounded mt-md-10 position-relative">
                 <img
-                  src="/public/assets/media/MediaImages/_DSC4684.JPG"
+                  src="/public/assets/media/MediaImages/_DSC4588.JPG"
                   alt="photo"
                 />
               </figure>
