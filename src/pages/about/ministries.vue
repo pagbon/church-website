@@ -8,7 +8,7 @@
   </div>
 
   <section id="snippet-3" class="wrapper bg-light wrapper-border">
-    <div class="container py-15 text-center">
+    <div class="container py-15">
       <!-- /.row -->
       <div class="position-relative">
         <div
@@ -21,7 +21,7 @@
           data-rellax-speed="1"
           style="top: -0.5rem; left: -2.5rem; z-index: 0"
         ></div>
-        <div class="row gx-md-5 gy-5">
+        <div class="row gx-md-2 gy-3">
           <div
             data-aos="fade-up"
             :data-aos-delay="i * 50"
@@ -38,26 +38,12 @@
                   alt=""
                 />
                 <h4 class="text-purple fw-bolder fs-22">{{ service.title }}</h4>
-                <p class="mb-2 fs-13">{{ service.description }}</p>
-                <p
-                  v-if="service.description2"
-                  class="mb-2 fs-13 fw-bolder text-black"
-                >
-                  {{ service.description2 }}
-                </p>
-                <p
-                  v-if="service.description3"
-                  class="mb-2 fs-13 fw-bolder text-black"
-                >
-                  {{ service.description3 }}
-                </p>
-                <p
-                  v-if="service.description4"
-                  class="mb-2 fs-13 fw-bolder text-black"
-                >
-                  {{ service.description4 }}
-                </p>
-                <p class="mb-2 fs-13">{{ service.description5 }}</p>
+                <div
+                  class="fs-14"
+                  v-if="service.typeHtml"
+                  v-html="service.description"
+                ></div>
+                <p v-else class="fs-14">{{ service.description }}</p>
                 <!-- Skipping link property -->
               </div>
               <!--/.card-body -->

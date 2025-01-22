@@ -135,33 +135,33 @@ export const checklistItems = [
 export const services = [
   {
     id: 1,
+    typeHtml: true,
     iconSrc: "/assets/img/icons/lineal/light-bulb.svg",
     iconColorClass: "text-yellow",
     title: "Teaching Ministry",
-    description:
-      "The teaching ministry is an essential part of any church ministry. It is key to discipleship. Every child is tutored in the things of life and as we gain mastery, we become responsible adults. So also, teaching is key to maturing believers for the work of the Kingdom and creating true disciples. At RCCG, City of David Calgary, our teaching ministry focuses on the core mandate of our church, which is ‘Perfecting the saints for the work of the ministry’. Ephesians 4:12. Our teaching ministry comprises of three teaching teams including bible study, Sunday school, and the children teaching group. Our meetings are as follows:",
-    description2: "Sunday School: 9 am - 10 am every Sunday",
-    description3: "Children’s Church: 10 am – 11:30 am every Sunday",
-    description4:
-      "Bible Study: 6:30 – 7:30 pm every Tuesday, via zoom: https://zoom.us/s/96845517732",
-    description5: null,
+    description: `<p>The teaching ministry is an essential part of any church ministry. It is key to discipleship. Every child is tutored in the things of life and as we gain mastery, we become responsible adults. So also, teaching is key to maturing believers for the work of the Kingdom and creating true disciples. At RCCG, City of David Calgary, our teaching ministry focuses on the core mandate of our church, which is ‘Perfecting the saints for the work of the ministry’. Ephesians 4:12. Our teaching ministry comprises of three teaching teams including bible study, Sunday school, and the children teaching group. Our meetings are as follows: 
+      <ol>
+      <li>Sunday School: 9 am - 10 am every Sunday</li>
+      <li>Children’s Church: 10 am – 11:30 am every Sunday</li>
+      <li>Bible Study: 6:30 – 7:30 pm every Tuesday, via zoom: https://zoom.us/s/96845517732</li>
+      </ol>
+      </p>`,
     linkColorClass: "link-yellow",
   },
   {
     id: 4,
+    typeHtml: true,
     iconSrc: "/assets/img/icons/lineal/megaphone.svg",
     iconColorClass: "text-blue",
     title: "Prayer Department",
-    description:
-      "The prayer department is founded on biblical advice that says – Rejoice always, pray continually, give thanks in all circumstances; for this is God’s will for you in Christ Jesus. 1 Thessalonians 5:16-18. Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus. Philippians 4:6-7. The department comes together to lift ourselves up in prayers to God and some of our present activities are:",
-    description2:
-      "Daily, Mon – Fri, 5.30 – 6.00 am via Conference call to the phone number 403-768-3750",
-    description3:
-      "Weekly, Wed, 9.00 – 9.30 pm via Conference call to the phone number 403-768-3750",
-    description4:
-      "Monthly, 1st Fri, 9.00 – 11.00 pm via ZOOM link: 6381724079 or https://zoom.us/i/ 6381724079, PW for the meeting is John316",
-    description5:
-      "We bless God for everything He has been doing through the department and we look forward to you joining us as well as we plan to expand our activities in the nearest future as the spirit of God leads. God is forever faithful. God be praised. Amen",
+    description: `<p> The prayer department is founded on biblical advice that says – Rejoice always, pray continually, give thanks in all circumstances; for this is God’s will for you in Christ Jesus. 1 Thessalonians 5:16-18. Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus. Philippians 4:6-7. The department comes together to lift ourselves up in prayers to God and some of our present activities are: 
+      <ol>
+      <li>Daily, Mon - Fri, 5.30 - 6.00 am via Conference call to the phone number 403-768-3750</li>
+      <li>Weekly, Wed, 9.00 - 9.30 pm via Conference call to the phone number 403-768-3750</li>
+      <li>Monthly, 1st Fri, 9.00 - 11.00 pm via ZOOM link: 6381724079 or https://zoom.us/i/ 6381724079, PW for the meeting is John316</li>
+      <li>We bless God for everything He has been doing through the department and we look forward to you joining us as well as we plan to expand our activities in the nearest future as the spirit of God leads. God is forever faithful. God be praised. Amen</li>
+      </ol>
+      </p>`,
     linkColorClass: "link-blue",
   },
   {
@@ -182,15 +182,30 @@ export const services = [
       "The COD men’s department assists the pastorate in the fulfillment of the parish mission and vision by evangelizing Christ in our various homes, work, personal lives, surroundings, and church. In partnership with other departments, we work to care for all the men, encourage each other prayerfully, and follow up with new members.",
     linkColorClass: "link-green",
   },
- 
   {
-    id: 4,
+    id: 41,
     iconSrc: "/assets/img/icons/lineal/megaphone.svg",
     iconColorClass: "text-blue",
     title: "Choir Department",
     description:
       "The choir department is in charge of providing music in times of praise, worship, and other music ministrations wholeheartedly and with enthusiasm. Members of the choir meet once a week to pray together, share new songs and rehearse. Choir members have the opportunity to grow vocally and in their knowledge of music.",
     linkColorClass: "link-blue",
+  },
+  {
+    id: 5,
+    iconSrc: "/assets/img/icons/lineal/megaphone.svg",
+    iconColorClass: "text-red",
+    title: "Sunday School Department",
+    description: `<p>The Sunday School department is one of the department under the Redeemed Christian Church of God City of David Calgary, Alberta, Canada. We provides the following responsibilities to the body of Christ:
+      <ol>
+      <li>We teach the Word of Life which is able to deliver our souls with the guidance of the Holy Spirit.</li>
+      <li>We believe in the power of God and teach others to do so</li>
+      <li>We expose false teachings and hold strongly to biblical doctrines.</li>
+      <li>We want to take as many people as possible with us to heaven through the Word of God.</li>
+      </ol>
+    </p>`,
+    linkColorClass: "link-red",
+    typeHtml: true,
   },
 ];
 
