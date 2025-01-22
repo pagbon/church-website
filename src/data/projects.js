@@ -457,7 +457,6 @@ export const projects7 = [
     categories: ["Prayer"],
     title: "Prayer Moment",
   },
-
   // Add more projects as needed
 ];
 
