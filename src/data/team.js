@@ -217,6 +217,7 @@ export const teamMembers3 = [
       },
     ],
   },
+  
   {
     id: 6,
     avatarSrc: "/assets/img/avatars/t6.png",
