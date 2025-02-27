@@ -55,7 +55,7 @@
         <!--/column -->
         <div class="col-lg-5">
           <h2 class="display-4 mb-8">
-            We'd Love to Hear From You         
+            We'd love to hear from you
            </h2>
           <div
             v-for="item in contactInfo"
