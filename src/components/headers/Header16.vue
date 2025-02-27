@@ -37,6 +37,7 @@
               <router-link to="/">
                 <img style="object-fit: contain;"
                   class="logo-dark"
+                   width="150px"
                   src="/assets/img/logo.png"
                   srcset="/assets/img/logo@2x.png 2x"
                   alt="photo"

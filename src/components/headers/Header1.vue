@@ -5,10 +5,12 @@
         addClass2 ? 'fixed navbar-clone' : ''
       } ${addClass ? ' navbar-stick' : ' navbar-unstick'} `"
     >
-      <div class="container flex-lg-row flex-nowrap align-items-center">
+      <div class="container-fluid flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand w-100">
           <router-link to="/">
-            <img style="object-fit: contain;"
+            <img
+              width="150px"
+              style="object-fit: contain"
               src="/assets/img/logo.png"
               srcset="/assets/img/logo@2x.png 2x"
               alt="photo"
@@ -22,7 +24,9 @@
           <div class="offcanvas-header d-lg-none">
             <h3 class="text-white fs-30 mb-0">
               <router-link to="/">
-                <img style="object-fit: contain;"
+                <img
+                  width="150px"
+                  style="object-fit: contain"
                   class="logo-dark"
                   src="/assets/img/logo.png"
                   srcset="/assets/img/logo@2x.png 2x"
@@ -45,7 +49,10 @@
             <!-- /.navbar-nav -->
             <div class="offcanvas-footer d-lg-none">
               <div>
-                <a href="mailto:info@rccgcityofdavidcalgary.com" class="link-inverse">
+                <a
+                  href="mailto:info@rccgcityofdavidcalgary.com"
+                  class="link-inverse"
+                >
                   info@rccgcityofdavidcalgary.com
                 </a>
                 <br />
