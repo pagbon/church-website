@@ -6,8 +6,8 @@
         <div class="row">
           <!-- /column -->
           <div class="col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center">
-            <img style="object-fit: contain;"
-              style="width: 500px"
+            <img 
+              style="width: 500px;object-fit: contain;"
               class="img-fluid"
               src="/assets/img/illustrations/404.jpg"
               alt="photo"
