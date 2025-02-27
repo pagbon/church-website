@@ -9,7 +9,7 @@
       <div class="overlap-grid overlap-grid-2">
         <div class="item">
           <figure class="rounded shadow">
-            <img
+            <img style="object-fit: contain;"
               src="/assets/img/photos/about2.jpg"
               srcset="/assets/img/photos/about2@2x.jpg 2x"
               alt="photo"
@@ -18,7 +18,7 @@
         </div>
         <div class="item">
           <figure class="rounded shadow">
-            <img
+            <img style="object-fit: contain;"
               src="/assets/img/photos/about3.jpg"
               srcset="/assets/img/photos/about3@2x.jpg 2x"
               alt="photo"
@@ -29,7 +29,7 @@
     </div>
     <!--/column -->
     <div class="col-lg-6">
-      <img
+      <img style="object-fit: contain;"
         src="/assets/img/icons/lineal/megaphone.svg"
         class="icon-svg icon-svg-md mb-4"
         alt="photo"

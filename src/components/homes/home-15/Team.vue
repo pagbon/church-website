@@ -45,7 +45,7 @@
           >
             <SwiperSlide v-for="(item, i) in imageArray" :key="i">
               <div class="item-inner">
-                <img
+                <img 
                   :src="item.image.src"
                   style="height: 350px; object-fit: cover"
                   class="img-fluid rounded"

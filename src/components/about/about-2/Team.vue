@@ -43,7 +43,7 @@
               }"
             >
               <SwiperSlide v-for="(elm, i) in teamMembers3" :key="i">
-                <img
+                <img style="object-fit: contain;"
                   class="rounded-circle w-20 mx-auto mb-4"
                   :src="elm.avatarSrc"
                   alt="photo"

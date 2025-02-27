@@ -11,7 +11,7 @@
           <div class="row gx-md-5 gy-5">
             <div class="col-md-6">
               <figure class="rounded mt-md-10 position-relative">
-                <img
+                <img style="object-fit: contain;"
                   src="/public/assets/media/MediaImages/_DSC4588.JPG"
                   alt="photo"
                 />
@@ -22,7 +22,7 @@
               <div class="row gx-md-5 gy-5">
                 <div class="col-md-12 order-md-2">
                   <figure class="rounded">
-                    <img
+                    <img style="object-fit: contain;"
                     src="/public/assets/media/MediaImages/_DSC4190.JPG"
                     alt="photo"
                     />
@@ -33,7 +33,7 @@
                   <div class="card bg-pale-primary text-center counter-wrapper">
                     <div class="col-md-12 order-md-2">
                       <figure class="rounded">
-                        <img
+                        <img style="object-fit: contain;"
                         src="/public/assets/media/MediaImages/_DSC4675.JPG"
                         alt="photo"
                         />
@@ -88,7 +88,7 @@
       <!--/.row -->
       <div class="row">
         <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-          <h2 class="display-4 mb-3 text-center">Drop Us a Line</h2>
+          <h2 class="display-4 mb-3 text-center">Drop us a line</h2>
           <p class="lead text-center mb-10">
             Reach out to us from our contact form and we will get back to you
             shortly.
@@ -168,7 +168,7 @@ const submitForm = () => {
   const subject = `Contact from ${form.firstName} ${form.lastName} - ${form.Phone}`;
   const body = `Name: ${form.firstName} ${form.lastName}\nEmail: ${form.email}\nDepartment: ${form.Phone}\n\nMessage:\n${form.message}`;
 
-  const mailtoLink = `mailto:info@rccgcityofdavid.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const mailtoLink = `mailto:info@rccgcityofdavidcalgary.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   window.location.href = mailtoLink;
 };
 </script>

@@ -5,7 +5,7 @@
         <div class="col-lg-4">
           <div class="widget">
             <router-link to="/">
-              <img
+              <img style="object-fit: contain;"
                 class="logo-dark img-fluid shadow"
                 src="/assets/img/logo.png"
                 srcset="/assets/img/logo@2x.png 2x"
@@ -48,7 +48,7 @@
               </div>
               <div>
                 <h6 class="mb-1 text-yellow">Email</h6>
-                <p class="mb-1 fs-13">info@rccgcityofdavid.com</p>
+                <p class="mb-1 fs-13">info@rccgcityofdavidcalgary.com</p>
               </div>
             </div>
             <div class="d-flex flex-row my-1">

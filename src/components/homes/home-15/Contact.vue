@@ -11,7 +11,7 @@
             style="top: -2rem; left: -1.4rem"
           ></div>
           <figure class="rounded">
-            <img
+            <img style="object-fit: contain;"
               src="/assets/img/photos/g11.jpg"
               srcset="/assets/img/photos/g11@2x.jpg 2x"
               alt="photo"
@@ -20,7 +20,7 @@
         </div>
         <!--/column -->
         <div class="col-lg-6">
-          <img
+          <img style="object-fit: contain;"
             src="/assets/img/icons/lineal/telemarketer.svg"
             class="icon-svg icon-svg-md mb-4"
             alt="photo"

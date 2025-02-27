@@ -8,7 +8,7 @@
             style="bottom: 0; left: 10%; width: 28%; z-index: 2"
           >
             <figure>
-              <img
+              <img style="object-fit: contain;"
                 src="/assets/img/photos/co2.png"
                 srcset="/assets/img/photos/co2@2x.png 2x"
                 alt="photo"

@@ -34,7 +34,7 @@
         >
           <SwiperSlide v-for="(elm, i) in projects3" :key="i">
             <figure class="rounded">
-              <img :src="elm.image.src" alt="photo" />
+              <img style="object-fit: contain;" :src="elm.image.src" alt="photo" />
             </figure>
           </SwiperSlide>
         </Swiper>

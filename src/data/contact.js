@@ -18,7 +18,7 @@ export const contactInfo = [
     id: 3,
     iconClass: "uil uil-envelope",
     title: "E-mail",
-    mail: "info@rccgcityofdavid.com",
+    mail: "info@rccgcityofdavidcalgary.com",
   },
 ];
 export const contactInfo2 = [
@@ -41,6 +41,6 @@ export const contactInfo2 = [
     id: 3,
     iconClass: "uil uil-envelope",
     title: "E-mail",
-    mail: ["info@rccgcityofdavid.com"],
+    mail: ["info@rccgcityofdavidcalgary.com"],
   },
 ];

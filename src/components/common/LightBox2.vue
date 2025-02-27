@@ -28,7 +28,7 @@
           justifyContent: 'center',
         }"
       >
-        <img
+        <img style="object-fit: contain;"
           v-if="elm.type == 'image'"
           :src="elm.src"
           style="

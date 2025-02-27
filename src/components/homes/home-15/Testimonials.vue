@@ -9,7 +9,7 @@
             style="top: 7rem; left: 1rem"
           ></div>
           <figure>
-            <img
+            <img style="object-fit: contain;"
               class="img-thumbnail rounded shadow-sm"
               src="/assets/img/photos/co1.jpg"
               srcset="/assets/img/photos/co1@2x.jpg 2x"

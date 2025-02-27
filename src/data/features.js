@@ -143,7 +143,7 @@ export const services = [
       <ol>
       <li>Sunday School: 9 am - 10 am every Sunday</li>
       <li>Children’s Church: 10 am – 11:30 am every Sunday</li>
-      <li>Bible Study: 6:30 – 7:30 pm every Tuesday, via zoom: https://zoom.us/s/96845517732</li>
+      <li>Bible Study: 6:30 – 7:30 pm every Tuesday, via zoom: https://zoom.us/s/96845517732, Passcode - John316</li>
       </ol>
       </p>`,
     linkColorClass: "link-yellow",
@@ -158,7 +158,7 @@ export const services = [
       <ol>
       <li>Daily, Mon - Fri, 5.30 - 6.00 am via Conference call to the phone number 403-768-3750</li>
       <li>Weekly, Wed, 9.00 - 9.30 pm via Conference call to the phone number 403-768-3750</li>
-      <li>Monthly, 1st Fri, 9.00 - 11.00 pm via ZOOM link: 6381724079 or https://zoom.us/i/ 6381724079, PW for the meeting is John316</li>
+      <li>Monthly, 1st Fri, 9.00 - 11.00 pm via ZOOM link: 6381724079 or https://zoom.us/i/6381724079, Passcode for the meeting is John316</li>
       <li>We bless God for everything He has been doing through the department and we look forward to you joining us as well as we plan to expand our activities in the nearest future as the spirit of God leads. God is forever faithful. God be praised. Amen</li>
       </ol>
       </p>`,
@@ -203,6 +203,18 @@ export const services = [
       <li>We expose false teachings and hold strongly to biblical doctrines.</li>
       <li>We want to take as many people as possible with us to heaven through the Word of God.</li>
       </ol>
+    </p>`,
+    linkColorClass: "link-red",
+    typeHtml: true,
+  },
+  {
+    id: 53,
+    iconSrc: "/assets/img/icons/lineal/megaphone.svg",
+    iconColorClass: "text-blue",
+    title: "Good Women Fellowship (GWF)",
+    description: `<p>
+    The Good Women Fellowship (GWF) is dedicated to fostering relationships among all the
+  women in the church, with a focus on enhancing each other's well-being and promoting unity. To study, unlearn and relearn some biblical truths and situations that are peculiar to women. By this means, we aim to nurture our spiritual growth and harness our diverse gifts, talents, and abilities to serve in our families, the church, and our communities.
     </p>`,
     linkColorClass: "link-red",
     typeHtml: true,

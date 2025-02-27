@@ -31,7 +31,7 @@
           >
             <div class="card shadow-lg">
               <div class="card-body">
-                <img
+                <img style="object-fit: contain;"
                   :src="service.iconSrc"
                   class="icon-svg icon-svg-md"
                   :class="service.iconColorClass"

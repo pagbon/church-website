@@ -35,7 +35,7 @@
             :href="'#' + item.tabId"
           >
             <div>
-              <img
+              <img style="object-fit: contain;"
                 :src="item.iconSrc"
                 class="icon-svg icon-svg-md me-4"
                 :class="item.iconColorClass"
@@ -59,7 +59,7 @@
             <div class="col-lg-6">
               <div class="row gx-md-5 gy-5 align-items-center">
                 <div class="col-6">
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg d-flex ms-auto"
                     src="/assets/img/photos/sa13.jpg"
                     srcset="/assets/img/photos/sa13@2x.jpg 2x"
@@ -68,13 +68,13 @@
                 </div>
                 <!-- /column -->
                 <div class="col-6">
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg mb-5"
                     src="/assets/img/photos/sa14.jpg"
                     srcset="/assets/img/photos/sa14@2x.jpg 2x"
                     alt="photo"
                   />
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg d-flex col-10"
                     src="/assets/img/photos/sa15.jpg"
                     srcset="/assets/img/photos/sa15@2x.jpg 2x"
@@ -121,13 +121,13 @@
             <div class="col-lg-6 order-lg-2">
               <div class="row gx-md-5 gy-5">
                 <div class="col-5">
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg my-5 d-flex ms-auto"
                     src="/assets/img/photos/sa9.jpg"
                     srcset="/assets/img/photos/sa9@2x.jpg 2x"
                     alt="photo"
                   />
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg d-flex col-10 ms-auto"
                     src="/assets/img/photos/sa10.jpg"
                     srcset="/assets/img/photos/sa10@2x.jpg 2x"
@@ -136,13 +136,13 @@
                 </div>
                 <!-- /column -->
                 <div class="col-7">
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg mb-5"
                     src="/assets/img/photos/sa11.jpg"
                     srcset="/assets/img/photos/sa11@2x.jpg 2x"
                     alt="photo"
                   />
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg d-flex col-11"
                     src="/assets/img/photos/sa12.jpg"
                     srcset="/assets/img/photos/sa12@2x.jpg 2x"
@@ -189,13 +189,13 @@
             <div class="col-lg-6">
               <div class="row gx-md-5 gy-5">
                 <div class="col-6">
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg mb-5"
                     src="/assets/img/photos/sa5.jpg"
                     srcset="/assets/img/photos/sa5@2x.jpg 2x"
                     alt="photo"
                   />
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg d-flex col-10 ms-auto"
                     src="/assets/img/photos/sa6.jpg"
                     srcset="/assets/img/photos/sa6@2x.jpg 2x"
@@ -204,13 +204,13 @@
                 </div>
                 <!-- /column -->
                 <div class="col-6">
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg my-5"
                     src="/assets/img/photos/sa7.jpg"
                     srcset="/assets/img/photos/sa7@2x.jpg 2x"
                     alt="photo"
                   />
-                  <img
+                  <img style="object-fit: contain;"
                     class="img-fluid rounded shadow-lg d-flex col-10"
                     src="/assets/img/photos/sa8.jpg"
                     srcset="/assets/img/photos/sa8@2x.jpg 2x"

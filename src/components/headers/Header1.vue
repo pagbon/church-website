@@ -8,7 +8,7 @@
       <div class="container flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand w-100">
           <router-link to="/">
-            <img
+            <img style="object-fit: contain;"
               src="/assets/img/logo.png"
               srcset="/assets/img/logo@2x.png 2x"
               alt="photo"
@@ -22,7 +22,7 @@
           <div class="offcanvas-header d-lg-none">
             <h3 class="text-white fs-30 mb-0">
               <router-link to="/">
-                <img
+                <img style="object-fit: contain;"
                   class="logo-dark"
                   src="/assets/img/logo.png"
                   srcset="/assets/img/logo@2x.png 2x"
@@ -45,8 +45,8 @@
             <!-- /.navbar-nav -->
             <div class="offcanvas-footer d-lg-none">
               <div>
-                <a href="mailto:info@rccgcityofdavid.com" class="link-inverse">
-                  info@rccgcityofdavid.com
+                <a href="mailto:info@rccgcityofdavidcalgary.com" class="link-inverse">
+                  info@rccgcityofdavidcalgary.com
                 </a>
                 <br />
                 1-403-401-5671

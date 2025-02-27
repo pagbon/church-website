@@ -40,7 +40,7 @@
                 class="cursor-pointer"
                 @click="() => setActiveLightBox(true, i)"
               >
-                <img :src="project.image.src" alt="photo" />
+                <img style="object-fit: contain;" :src="project.image.src" alt="photo" />
                 <span class="bg"></span>
               </div>
               <figcaption>

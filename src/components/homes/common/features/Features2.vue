@@ -9,7 +9,7 @@
             style="bottom: -2rem; left: -0.7rem"
           ></div>
           <figure class="rounded mb-0">
-            <img
+            <img style="object-fit: contain;"
               src="/assets/img/photos/se3.jpg"
               srcset="/assets/img/photos/se3@2x.jpg 2x"
               alt="photo"
@@ -70,7 +70,7 @@
             style="bottom: -2.5rem; right: -1.5rem"
           ></div>
           <figure class="rounded mb-0">
-            <img
+            <img style="object-fit: contain;"
               src="/assets/img/photos/se4.jpg"
               srcset="/assets/img/photos/se4@2x.jpg 2x"
               alt="photo"

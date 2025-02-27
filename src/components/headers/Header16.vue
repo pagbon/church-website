@@ -9,16 +9,18 @@
           : ' navbar-unstick navbar-dark'
       } `"
     >
-      <div class="container flex-lg-row flex-nowrap align-items-center">
+      <div class="container-fluid flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand w-100">
           <router-link to="/">
-            <img
+            <img style="object-fit: contain;"
+              width="150px"
               class="logo-dark"
               src="/assets/img/logo.png"
               srcset="/assets/img/logo@2x.png 2x"
               alt="photo"
             />
-            <img
+            <img style="object-fit: contain;"
+              width="150px"
               class="logo-light"
               src="/assets/img/logo.png"
               srcset="/assets/img/logo@2x.png 2x"
@@ -33,7 +35,7 @@
           <div class="offcanvas-header d-lg-none">
             <h3 class="text-white fs-30 mb-0">
               <router-link to="/">
-                <img
+                <img style="object-fit: contain;"
                   class="logo-dark"
                   src="/assets/img/logo.png"
                   srcset="/assets/img/logo@2x.png 2x"
@@ -56,8 +58,8 @@
             <!-- /.navbar-nav -->
             <div class="offcanvas-footer d-lg-none">
               <div>
-                <a href="mailto:info@rccgcityofdavid.com" class="link-inverse"
-                  >info@rccgcityofdavid.com</a
+                <a href="mailto:info@rccgcityofdavidcalgary.com" class="link-inverse"
+                  >info@rccgcityofdavidcalgary.com</a
                 >
                 <br />
                 1-403-401-5671 <br />

@@ -4,7 +4,7 @@
       <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
         <div class="col-lg-7">
           <figure>
-            <img
+            <img style="object-fit: contain;"
               class="w-auto"
               src="/assets/img/illustrations/i5.jpg"
               srcset="/assets/img/illustrations/i5@2x.jpg 2x"

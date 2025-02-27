@@ -25,7 +25,7 @@
           height: '100%',
         }"
       >
-        <img
+        <img 
           :src="elm"
           style="
             height: 94vh;

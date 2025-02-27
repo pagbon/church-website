@@ -5,7 +5,7 @@
         <div class="col-xl-10 mx-auto">
           <div class="row align-items-center counter-wrapper gy-6 text-center">
             <div v-for="(elm, i) in facts2" :key="i" class="col-md-3">
-              <img
+              <img style="object-fit: contain;"
                 :src="elm.iconSrc"
                 class="icon-svg icon-svg-lg text-primary mb-3"
                 alt="photo"

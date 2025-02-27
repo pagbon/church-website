@@ -50,7 +50,7 @@
           >
             <div class="pricing card text-center">
               <div class="card-body">
-                <img
+                <img style="object-fit: contain;"
                   :src="elm.iconOne"
                   class="icon-svg icon-svg-md text-primary mb-3"
                   alt="photo"

@@ -20,11 +20,11 @@
                 class="icon btn btn-circle btn-lg btn-soft-grape pe-none me-4"
               >
                 <span class="number">
-                  <img
+                  <img 
                     src="/assets/img/icons/lineal/list.svg"
                     class="icon-svg icon-svg-md"
                     alt="photo"
-                    style="width: 30px"
+                    style="width: 30px;object-fit: contain;"
                   />
                   <!-- {{ item.number }} -->
                 </span>

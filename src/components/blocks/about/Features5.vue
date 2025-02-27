@@ -5,16 +5,16 @@
         <div
           class="col-md-11 col-lg-9 col-xl-8 col-xxl-7 mx-auto position-relative"
         >
-          <img
+          <img 
             src="/assets/img/svg/doodle3.svg"
             class="h-11 position-absolute d-none d-lg-block"
-            style="top: -20%; right: -12%"
+            style="top: -20%; right: -12%;object-fit: contain;"
             alt="image"
           />
-          <img
+          <img 
             src="/assets/img/svg/doodle9.svg"
             class="h-17 position-absolute d-none d-lg-block"
-            style="bottom: 5%; left: -17%"
+            style="bottom: 5%; left: -17%;object-fit: contain;"
             alt="image"
           />
           <h2 class="fs-16 text-muted mb-3 text-center">More About Us</h2>
@@ -31,7 +31,7 @@
       <div class="row d-flex align-items-start">
         <div class="col-lg-6 position-lg-sticky" style="top: 8rem">
           <figure>
-            <img
+            <img style="object-fit: contain;"
               src="/assets/img/photos/devices5.png"
               srcset="/assets/img/photos/devices5@2x.png 2x"
               alt="image"
@@ -48,7 +48,7 @@
           >
             <div>
               <div :class="feature.svgBgClass">
-                <img
+                <img style="object-fit: contain;"
                   :src="feature.icon"
                   class="icon-svg solid text-navy"
                   alt="photo"

@@ -7,7 +7,7 @@
         class="col-4 col-md-2"
       >
         <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4">
-          <img :src="elm.src" alt="photo" />
+          <img style="object-fit: contain;" :src="elm.src" alt="photo" />
         </figure>
       </div>
 

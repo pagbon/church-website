@@ -20,7 +20,7 @@
               class="project item col-md-6 col-xl-3"
             >
               <figure class="rounded mb-6">
-                <img
+                <img style="object-fit: contain;"
                   :src="project.avatarSrc"
                   alt="photo"
                   class="img-thumbnail"
