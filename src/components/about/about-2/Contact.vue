@@ -1,8 +1,8 @@
 <template>
   <section class="wrapper bg-light">
     <div class="container py-10 py-md-15">
-      <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-        <div class="col-lg-7">
+      <div class="row gx-lg-8 gx-xl-12 gy-10 justify-content-center align-items-center">
+        <!-- <div class="col-lg-7">
           <figure>
             <img style="object-fit: contain;"
               class="w-auto"
@@ -11,9 +11,9 @@
               alt="photo"
             />
           </figure>
-        </div>
+        </div> -->
         <!--/column -->
-        <div class="col-lg-5">
+        <div class="col-lg-6 shadow-lg p-3 rounded">
           <h2
             class="fs-25 text-line text-gradient gradient-5 text-purple text-center"
           >

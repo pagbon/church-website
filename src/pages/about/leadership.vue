@@ -20,7 +20,8 @@
               class="project item col-md-6 col-xl-3"
             >
               <figure class="rounded mb-6">
-                <img style="object-fit: contain;"
+                <img
+                  style="object-fit: contain"
                   :src="project.avatarSrc"
                   alt="photo"
                   class="img-thumbnail"
@@ -39,17 +40,24 @@
                   <h2 class="post-title text-purple h3 fs-20 my-0">
                     {{ project.name }}
                   </h2>
-                  <p class="post-category my-0 text-ash">
-                    {{ project.position }}
-                  </p>
-                  <a
-                    :href="`mailto:${item.link}`"
-                    v-for="(item, index) in project.socialLinks"
-                    :key="index"
-                    class="my-0 text-ash fs-13"
+                  <div
+                    v-for="(item, index) in project.display"
+                    class="my-1 py-0"
                   >
-                    {{ item.link }}
-                  </a>
+                    <p
+                      class="py-0 my-0 text-ash"
+                      style="margin: 0 !important; padding: 0 !important"
+                    >
+                      {{ item.position }}
+                    </p>
+                    <a
+                      style="margin: 0 !important; padding: 0 !important"
+                      :href="`mailto:${item.link}`"
+                      class="my-0 py-0 text-ash fs-12"
+                    >
+                      <i>{{ item.link }}</i>
+                    </a>
+                  </div>
                 </div>
                 <!-- /.post-header -->
               </div>
