@@ -5,8 +5,10 @@
     :key="index"
     target="_blank"
     :href="socialMedia.href"
+    :class="socialMedia.class"
+    
   >
-    <i :class="socialMedia.iconClass" class="text-white"></i>
+    <i :class="socialMedia.iconClass" class="fs-30"></i>
   </a>
   <CommonScrolltop />
 </template>
@@ -16,12 +18,12 @@ import CommonScrolltop from "@/components/common/Scrolltop.vue";
 const socialMediaLinks = [
   {
     id: 1,
-    href: "https://twitter.com/cityofdavidcalgary",
-    iconClass: "uil uil-twitter",
+    href: "https://www.instagram.com/rccgcityofdavidcalgary_/p/DFk4xSNNwBc/",
+    iconClass: "uil uil-instagram",
   },
   {
     id: 2,
-    href: "https://www.facebook.com/RCCG-City-of-David-Calgary-846062358788035/",
+    href: "https://www.facebook.com/RCCGCOD2015/",
     iconClass: "uil uil-facebook-f",
   },
   {

@@ -22,7 +22,7 @@
       >
         <SwiperSlide>
           <div
-            class="swiper-slide bg-overlay bg-overlay-100 bg-dark bg-image"
+            class="swiper-slide bg-dark bg-image"
             style="background-image: url(/assets/img/photos/bg7.jpg)"
           >
             <div class="container h-100">
