@@ -25,7 +25,7 @@
                   <figure class="rounded">
                     <img
                       style="object-fit: contain"
-                      src="/public/assets/media/MediaImages/_DSC4190.JPG"
+                       src="/assets/img/photos/g11.jpg"
                       alt="photo"
                     />
                   </figure>
