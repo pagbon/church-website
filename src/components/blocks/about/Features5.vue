@@ -21,7 +21,7 @@
           <h3 class="display-4 mb-12 text-center">
             A vibrant
             <span class="text-gradient text-purple gradient-5">
-              community of believers</span
+              community of bellievers</span
             >, committed to christ.
           </h3>
         </div>
