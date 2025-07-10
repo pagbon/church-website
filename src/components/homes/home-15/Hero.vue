@@ -23,7 +23,83 @@
         <SwiperSlide>
           <div
             class="swiper-slide bg-dark bg-image"
-            style="background-image: url(/assets/img/photos/bg7.jpg)"
+            :style="{ backgroundImage: `url(${content.slides[0].asset.url})` }"
+          >
+            <div class="container h-100">
+              <div class="row h-100">
+                <div
+                  class="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center justify-content-center align-self-center"
+                >
+                  <h2
+                    class="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s"
+                  >
+                    {{ content?.heroText }}
+                  </h2>
+                  <p
+                    class="lead fs-18 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s"
+                  >
+                    {{ content.subtitle }}
+                  </p>
+                  <div
+                    class="animate__animated animate__slideInUp animate__delay-3s"
+                  >
+                    <router-link
+                      :to="content.ctaRoute"
+                      class="btn btn-lg btn-outline-yellow rounded-pill"
+                    >
+                      {{ content.ctaText }}
+                    </router-link>
+                  </div>
+                </div>
+                <!--/column -->
+              </div>
+              <!--/.row -->
+            </div>
+            <!--/.container -->
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            class="swiper-slide bg-overlay bg-overlay-400 bg-dark bg-image"
+            :style="{ backgroundImage: `url(${content.slides[1].asset.url})` }"
+          >
+            <div class="container h-100">
+              <div class="row h-100">
+                <div
+                  class="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center justify-content-center align-self-center"
+                >
+                  <h2
+                    class="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s"
+                  >
+                    {{ content?.heroText }}
+                  </h2>
+                  <p
+                    class="lead fs-18 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s"
+                  >
+                    {{ content.subtitle }}
+                  </p>
+                  <div
+                    class="animate__animated animate__slideInUp animate__delay-3s"
+                  >
+                    <router-link
+                      :to="content.ctaRoute"
+                      class="btn btn-lg btn-outline-yellow rounded-pill"
+                    >
+                      {{ content.ctaText }}
+                    </router-link>
+                  </div>
+                </div>
+                <!--/column -->
+              </div>
+              <!--/.row -->
+            </div>
+            <!--/.container -->
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            class="swiper-slide bg-overlay bg-overlay-400 bg-dark bg-image"
+            :style="{ backgroundImage: `url(${content.slides[2].asset.url})` }"
           >
             <div class="container h-100">
               <div class="row h-100">
@@ -55,14 +131,6 @@
               </div>
               <!--/.row -->
             </div>
-            <!--/.container -->
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            class="swiper-slide bg-overlay bg-overlay-400 bg-dark bg-image"
-            style="background-image: url(/assets/img/photos/bg8.jpg)"
-          >
             <div class="container h-100">
               <div class="row h-100">
                 <div
@@ -71,73 +139,21 @@
                   <h2
                     class="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s"
                   >
-                    Perfecting the Saints for Service
+                    {{ content?.heroText }}
                   </h2>
                   <p
                     class="lead fs-18 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s"
                   >
-                    Worship with us at RCCG City of David Parish, Calgary.
+                    {{ content.subtitle }}
                   </p>
                   <div
                     class="animate__animated animate__slideInUp animate__delay-3s"
                   >
                     <router-link
-                      to="/about"
+                      :to="content.ctaRoute"
                       class="btn btn-lg btn-outline-yellow rounded-pill"
                     >
-                      Learn More
-                    </router-link>
-                  </div>
-                  <!-- <div
-                    class="animate__animated animate__slideInUp animate__delay-3s"
-                  >
-                    <div
-                      class="btn btn-circle btn-white btn-play ripple mx-auto mb-5 cursor-pointer"
-                      @click="
-                        () => {
-                          modalOpen = true;
-                        }
-                      "
-                    >
-                      <i class="icn-caret-right"></i>
-                    </div>
-                  </div> -->
-                </div>
-                <!--/column -->
-              </div>
-              <!--/.row -->
-            </div>
-            <!--/.container -->
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            class="swiper-slide bg-overlay bg-overlay-400 bg-dark bg-image"
-            style="background-image: url(/assets/img/photos/bg9.jpg)"
-          >
-            <div class="container h-100">
-              <div class="row h-100">
-                <div
-                  class="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center justify-content-center align-self-center"
-                >
-                  <h2
-                    class="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s"
-                  >
-                    Perfecting the Saints for Service
-                  </h2>
-                  <p
-                    class="lead fs-18 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s"
-                  >
-                    Worship with us at RCCG City of David Parish, Calgary.
-                  </p>
-                  <div
-                    class="animate__animated animate__slideInUp animate__delay-3s"
-                  >
-                    <router-link
-                      to="/about"
-                      class="btn btn-lg btn-outline-yellow rounded-pill"
-                    >
-                      Learn More
+                      {{ content.ctaText }}
                     </router-link>
                   </div>
                 </div>
@@ -173,6 +189,9 @@ const modalOpen = ref(false);
 const modalClose = () => {
   modalOpen.value = false;
 };
+defineProps({
+  content: Object,
+});
 </script>
 
 <style lang="scss" scoped></style>

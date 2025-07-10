@@ -5,24 +5,26 @@
         <div
           class="col-md-11 col-lg-9 col-xl-8 col-xxl-7 mx-auto position-relative"
         >
-          <img 
+          <img
             src="/assets/img/svg/doodle3.svg"
             class="h-11 position-absolute d-none d-lg-block"
-            style="top: -20%; right: -12%;object-fit: contain;"
+            style="top: -20%; right: -12%; object-fit: contain"
             alt="image"
           />
-          <img 
+          <img
             src="/assets/img/svg/doodle9.svg"
             class="h-17 position-absolute d-none d-lg-block"
-            style="bottom: 5%; left: -17%;object-fit: contain;"
+            style="bottom: 5%; left: -17%; object-fit: contain"
             alt="image"
           />
-          <h2 class="fs-16 text-muted mb-3 text-center">More About Us</h2>
+          <h2 class="fs-16 text-muted mb-3 text-center">
+            {{ content?.sectionTitle }}
+          </h2>
           <h3 class="display-4 mb-12 text-center">
-            A vibrant
+            A {{ content.heading.slice(0, 9) }}
             <span class="text-gradient text-purple gradient-5">
-              community of believers</span
-            >, committed to christ.
+              {{ content.heading.slice(9, 31) }}</span
+            >{{ content.heading.slice(31) }}
           </h3>
         </div>
         <!-- /column -->
@@ -31,10 +33,10 @@
       <div class="row d-flex align-items-start">
         <div class="col-lg-6 position-lg-sticky" style="top: 8rem">
           <figure>
-            <img style="object-fit: contain;"
-              src="/assets/img/photos/devices5.png"
-              srcset="/assets/img/photos/devices5@2x.png 2x"
-              alt="image"
+            <img
+              style="object-fit: contain"
+              :src="content.image.asset.url"
+              :alt="content.image.alt || 'image'"
               class="img-thumbnail shadow"
             />
           </figure>
@@ -42,14 +44,15 @@
         <!-- /column -->
         <div class="col-lg-5 ms-auto">
           <div
-            v-for="(feature, index) in features3"
+            v-for="(feature, index) in content.details"
             :key="index"
             class="d-flex flex-row mb-1"
           >
             <div>
-              <div :class="feature.svgBgClass">
-                <img style="object-fit: contain;"
-                  :src="feature.icon"
+              <div :class="features3[index].svgBgClass">
+                <img
+                  style="object-fit: contain"
+                  :src="features3[index].icon"
                   class="icon-svg solid text-navy"
                   alt="photo"
                 />
@@ -57,7 +60,7 @@
             </div>
             <div>
               <h4 class="fs-20 fw-bolder text-purple">{{ feature.title }}</h4>
-              <p>{{ feature.description }}</p>
+              <PortableText :value="feature.description" />
             </div>
           </div>
         </div>
@@ -70,6 +73,10 @@
 
 <script setup>
 import { features3 } from "@/data/features";
+import { PortableText } from "@portabletext/vue";
+defineProps({
+  content: Object,
+});
 </script>
 
 <style lang="scss" scoped></style>

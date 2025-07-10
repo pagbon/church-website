@@ -2,12 +2,17 @@
   <div class="content-wrapper">
     <HeadersHeader1 />
     <PageHeader
-      title="Ministries"
-      description="Welcome to RCCG City of David, Calgary"
+      v-if="getSection('sharedHeroSection')"
+      :title="getSection('sharedHeroSection').heroTitle"
+      :description="getSection('sharedHeroSection').heroText"
     />
   </div>
 
-  <section id="snippet-3" class="wrapper bg-light wrapper-border">
+  <section
+    id="snippet-3"
+    class="wrapper bg-light wrapper-border"
+    v-if="getSection('ministriesSection')"
+  >
     <div class="container py-15">
       <!-- /.row -->
       <div class="position-relative">
@@ -25,25 +30,22 @@
           <div
             data-aos="fade-up"
             :data-aos-delay="i * 50"
-            v-for="(service, i) in services"
+            v-for="(service, i) in getSection('ministriesSection').ministries"
             :key="service.id"
             class="col-md-6 col-xl-6 d-flex align-items-stretch"
           >
             <div class="card shadow-lg">
               <div class="card-body">
-                <img style="object-fit: contain;"
-                  :src="service.iconSrc"
+                <img
+                  style="object-fit: contain"
+                  :src="services[i].iconSrc"
                   class="icon-svg icon-svg-md"
-                  :class="service.iconColorClass"
+                  :class="services[i].iconColorClass"
                   alt=""
                 />
                 <h4 class="text-purple fw-bolder fs-22">{{ service.title }}</h4>
-                <div
-                  class="fs-14"
-                  v-if="service.typeHtml"
-                  v-html="service.description"
-                ></div>
-                <p v-else class="fs-14">{{ service.description }}</p>
+
+                <PortableText :value="service.description" />
                 <!-- Skipping link property -->
               </div>
               <!--/.card-body -->
@@ -65,6 +67,22 @@
 
 <script setup>
 import { services } from "@/data/features";
+import { ministriesPageQuery } from "@/sanity/queries/ministriesPageQuery";
+import { client } from "@/sanity/sanityClient";
+import { PortableText } from "@portabletext/vue";
+import { ref, onMounted } from "vue";
+
+const servicesContent = ref([]);
+
+onMounted(async () => {
+  const data = await client.fetch(ministriesPageQuery);
+  console.log({ data });
+
+  servicesContent.value = data?.sections || [];
+});
+
+const getSection = (type) =>
+  servicesContent.value?.find((section) => section._type === type);
 </script>
 
 <style lang="scss" scoped></style>

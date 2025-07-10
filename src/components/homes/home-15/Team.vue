@@ -9,10 +9,11 @@
             height="3rem"
             class="text-yellow"
           />
-          <h2 class="display-4 mb-3 px-lg-14 text-purple">Media Gallery</h2>
+          <h2 class="display-4 mb-3 px-lg-14 text-purple">
+            {{ content.heading }}
+          </h2>
           <p class="lead">
-            Explore a vibrant collection of photos that capture the spirit of
-            our church community, worship services, and special events.
+            {{ content.description }}
           </p>
         </div>
         <!--/column -->
@@ -43,10 +44,10 @@
               1200: { slidesPerView: 4.5 },
             }"
           >
-            <SwiperSlide v-for="(item, i) in imageArray" :key="i">
+            <SwiperSlide v-for="(item, i) in content.images" :key="i">
               <div class="item-inner">
-                <img 
-                  :src="item.image.src"
+                <img
+                  :src="item.asset.url"
                   style="height: 350px; object-fit: cover"
                   class="img-fluid rounded"
                   alt="photo"
@@ -87,6 +88,10 @@ function getRandomObjectsAlt(array, count = 10) {
 }
 onMounted(() => {
   imageArray.value = getRandomObjectsAlt(projects7, 10);
+});
+
+defineProps({
+  content: Object,
 });
 </script>
 

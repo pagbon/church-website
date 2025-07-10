@@ -1,14 +1,13 @@
 <template>
   <!-- Social media links using map -->
   <a
-    v-for="(socialMedia, index) in socialMediaLinks"
+    v-for="(socialMedia, index) in socials"
     :key="index"
     target="_blank"
-    :href="socialMedia.href"
-    :class="socialMedia.class"
-    
+    :href="socialMedia.url"
+    :class="socialMediaLinks[index].class"
   >
-    <i :class="socialMedia.iconClass" class="fs-30"></i>
+    <i :class="socialMediaLinks[index].iconClass" class="fs-30"></i>
   </a>
   <CommonScrolltop />
 </template>
@@ -32,7 +31,10 @@ const socialMediaLinks = [
     iconClass: "uil uil-youtube",
   },
 ];
+
+defineProps({
+  socials: Array,
+});
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

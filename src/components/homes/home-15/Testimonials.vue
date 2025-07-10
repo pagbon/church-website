@@ -21,24 +21,11 @@
         <div class="col-md-7 col-lg-7 col-xl-8">
           <div class="my-10">
             <h2 class="display-6 mb-3 text-purple">
-              Welcome to the City of David
+              {{content.heading}}
             </h2>
 
-            <p class="lead">
-              This is a place of perfection established by divine mandate. The
-              church had her first service on Sunday January 11, 2015 and has
-              been growing from grace to grace since then. We believe that the
-              name – City of David Parish trumpets the purpose of God for the
-              city of Calgary and her inhabitants at this time in God’s grand
-              agenda.
-            </p>
-            <p class="lead">
-              The Word of God is true, infallible and everlasting. It is the
-              final authority for the believer and it was written with the
-              intent of making the believer complete, lacking nothing 2 Tim. 2:
-              16-17. We shall look at the Word for the biblical significance of
-              the City of David as a guide to God’s plan for His people.
-            </p>
+            
+            <PortableText :value="content.body" />
             <!-- /.swiper -->
           </div>
           <!-- /.swiper-container -->
@@ -54,6 +41,11 @@
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
+import { PortableText } from "@portabletext/vue";
+
+defineProps({
+  content: Object
+})
 </script>
 
 <style lang="scss" scoped></style>

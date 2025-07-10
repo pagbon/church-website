@@ -25,7 +25,7 @@
                   <figure class="rounded">
                     <img
                       style="object-fit: contain"
-                       src="/assets/img/photos/g11.jpg"
+                      src="/assets/img/photos/g11.jpg"
                       alt="photo"
                     />
                   </figure>
@@ -57,36 +57,36 @@
         </div>
         <!--/column -->
         <div class="col-lg-5">
-          <h2 class="display-4 mb-8">We'd love to hear from you</h2>
+          <h2 class="display-4 mb-8">{{ content.heading }}</h2>
 
           <div
-            v-for="item in contactInfo"
+            v-for="(item, id) in content.contactCards"
             :key="item.id"
             class="d-flex flex-row"
           >
             <div>
               <div class="icon text-primary fs-28 me-6 mt-n1">
-                <i :class="item.iconClass"></i>
+                <i :class="contactInfo[id].iconClass"></i>
               </div>
             </div>
             <div>
               <h5 class="mb-1">{{ item.title }}</h5>
 
-              <address v-if="item.address">
-                {{ item.address.line1 }}<br class="d-none d-md-block" />{{
-                  item.address.line2
-                }}
+              <address v-if="id === 0 || id === 1">
+                {{ item.description }}
               </address>
 
-              <p v-if="item.content">{{ item.content }}</p>
-              <a v-if="item.mail" :href="item.mail" class="link-body">{{
-                item.mail
-              }}</a>
+              <a
+                v-if="id === 2"
+                :href="`mailto:` + item.description"
+                class="link-body"
+                >{{ item.description }}</a
+              >
             </div>
           </div>
 
           <nav class="nav social mt-4 ms-0">
-            <FootersComponentsSocials />
+            <FootersComponentsSocials :socials="content.socialLinks" />
           </nav>
         </div>
         <!--/column -->
@@ -232,6 +232,10 @@ const submitForm = () => {
   )}&body=${encodeURIComponent(body)}`;
   window.location.href = mailtoLink;
 };
+
+defineProps({
+  content: Object,
+});
 </script>
 
 <style lang="scss" scoped></style>

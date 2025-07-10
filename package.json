@@ -11,6 +11,8 @@
   "dependencies": {
     "@iconfu/svg-inject": "^1.2.3",
     "@popperjs/core": "2.11.8",
+    "@portabletext/vue": "^1.0.12",
+    "@sanity/client": "^7.6.0",
     "aos": "^2.3.4",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",

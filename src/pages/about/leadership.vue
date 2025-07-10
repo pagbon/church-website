@@ -3,11 +3,16 @@
     <HeadersHeader1 />
     <PageHeader
       data-aos="fade-up"
-      title="Leadership"
-      description="At RCCG City of David, we believe that we are better together. Our staff has a blast serving Jesus, His people, and each other. Let us know how we can help you grow in your relationships, develop your gifts, and find success in your life."
+      v-if="getSection('sharedHeroSection')"
+      :title="getSection('sharedHeroSection').heroTitle"
+      :description="getSection('sharedHeroSection').heroText"
     />
 
-    <section id="snippet-8" class="wrapper wrapper-border">
+    <section
+      id="snippet-8"
+      class="wrapper wrapper-border"
+      v-if="getSection('leadershipGridSection')"
+    >
       <div class="container py-15">
         <!-- /.row -->
         <div class="grid grid-view projects-masonry">
@@ -15,23 +20,18 @@
             <div
               data-aos="fade-up"
               :data-aos-delay="i * 50"
-              v-for="(project, i) in teamMembers3"
-              :key="project.id"
+              v-for="(project, i) in getSection('leadershipGridSection')
+                .leaders"
+              :key="i"
               class="project item col-md-6 col-xl-3"
             >
               <figure class="rounded mb-6">
                 <img
                   style="object-fit: contain"
-                  :src="project.avatarSrc"
-                  alt="photo"
+                  :src="project.image.asset.url"
+                  :alt="project.image.alt || 'photo'"
                   class="img-thumbnail"
                 />
-                <!-- <div
-                  class="item-link cursor-pointer"
-                  @click="() => setActiveLightBox(true, i)"
-                >
-                  <i class="uil uil-focus-add"></i>
-                </div> -->
               </figure>
               <div
                 class="project-details d-flex justify-content-center flex-column"
@@ -41,8 +41,9 @@
                     {{ project.name }}
                   </h2>
                   <div
-                    v-for="(item, index) in project.display"
+                    v-for="(item, index) in project.roles"
                     class="my-1 py-0"
+                    :key="index"
                   >
                     <p
                       class="py-0 my-0 text-ash"
@@ -52,10 +53,10 @@
                     </p>
                     <a
                       style="margin: 0 !important; padding: 0 !important"
-                      :href="`mailto:${item.link}`"
+                      :href="`mailto:${item.email}`"
                       class="my-0 py-0 text-ash fs-12"
                     >
-                      <i>{{ item.link }}</i>
+                      <i>{{ item.email }}</i>
                     </a>
                   </div>
                 </div>
@@ -84,6 +85,9 @@
 import { onMounted, ref } from "vue";
 import { projects6 } from "@/data/projects";
 import { teamMembers3 } from "@/data/team";
+import Lightbox from "@/components/common/Lightbox.vue";
+import { client } from "@/sanity/sanityClient";
+import { leadershipPageQuery } from "@/sanity/queries/leadershipPageQuery";
 
 const activeLightBox = ref(false);
 const currentSlideIndex = ref();
@@ -92,11 +96,21 @@ onMounted(() => {
   images.value = projects6.map((elm) => elm.fullImage);
 });
 
+const leadershipContent = ref([]);
+
+onMounted(async () => {
+  const data = await client.fetch(leadershipPageQuery);
+  console.log({ data });
+  leadershipContent.value = data.sections;
+});
+
+const getSection = (type) =>
+  leadershipContent.value?.find((section) => section._type === type);
+
 const setActiveLightBox = (val, i) => {
   currentSlideIndex.value = i;
   activeLightBox.value = val;
 };
-import Lightbox from "@/components/common/Lightbox.vue";
 </script>
 
 <style lang="scss" scoped></style>

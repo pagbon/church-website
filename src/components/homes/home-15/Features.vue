@@ -9,8 +9,9 @@
       <div class="overlap-grid overlap-grid-2">
         <div class="item">
           <figure class="rounded shadow">
-            <img style="object-fit: contain;"
-              src="/assets/img/photos/about2.jpg"
+            <img
+              style="object-fit: contain"
+              :src="content.images[0].asset.url"
               srcset="/assets/img/photos/about2@2x.jpg 2x"
               alt="photo"
             />
@@ -18,8 +19,9 @@
         </div>
         <div class="item">
           <figure class="rounded shadow">
-            <img style="object-fit: contain;"
-              src="/assets/img/photos/about3.jpg"
+            <img
+              style="object-fit: contain"
+              :src="content.images[1].asset.url"
               srcset="/assets/img/photos/about3@2x.jpg 2x"
               alt="photo"
             />
@@ -29,30 +31,22 @@
     </div>
     <!--/column -->
     <div class="col-lg-6">
-      <img style="object-fit: contain;"
+      <img
+        style="object-fit: contain"
         src="/assets/img/icons/lineal/megaphone.svg"
         class="icon-svg icon-svg-md mb-4"
         alt="photo"
       />
-      <h2 class="display-4 mb-3 text-purple">Who Are We?</h2>
-      <p class="lead fs-lg">
-        We are a parish of the Redeemed Christain Church of God in North East,
-        Calgary.
-      </p>
-      <p class="mb-6">
-        This is a place of perfection established by divine mandate. The church
-        had her first service on Sunday January 11, 2015 and has been growing
-        from grace to grace since then. We believe that the name – City of David
-        Parish trumpets the purpose of God for the city of Calgary and her
-        inhabitants at this time in God’s grand agenda.
-      </p>
+      <h2 class="display-4 mb-3 text-purple">{{ content.heading }}</h2>
+
+      <PortableText :value="content.body" />
 
       <div class="my-1">
         <router-link
-          to="/about"
+          :to="content.ctaRoute"
           class="btn btn-lg btn-purple rounded-pill"
         >
-          Learn More
+          {{ content.ctaText }}
         </router-link>
       </div>
       <!--/.row -->
@@ -61,6 +55,11 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { PortableText } from "@portabletext/vue";
+defineProps({
+  content: Object,
+});
+</script>
 
 <style lang="scss" scoped></style>

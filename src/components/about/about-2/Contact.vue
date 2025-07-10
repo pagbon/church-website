@@ -1,7 +1,9 @@
 <template>
   <section class="wrapper bg-light">
     <div class="container py-10 py-md-15">
-      <div class="row gx-lg-8 gx-xl-12 gy-10 justify-content-center align-items-center">
+      <div
+        class="row gx-lg-8 gx-xl-12 gy-10 justify-content-center align-items-center"
+      >
         <!-- <div class="col-lg-7">
           <figure>
             <img style="object-fit: contain;"
@@ -42,9 +44,12 @@
               </address>
 
               <p v-if="item.content">{{ item.content }}</p>
-              <a v-if="item.mail" :href="`mailto:${item.mail}`" class="link-body">{{
-                item.mail
-              }}</a>
+              <a
+                v-if="item.mail"
+                :href="`mailto:${item.mail}`"
+                class="link-body"
+                >{{ item.mail }}</a
+              >
             </div>
           </div>
         </div>
@@ -60,6 +65,10 @@
 
 <script setup>
 import { contactInfo } from "@/data/contact";
+
+defineProps({
+  content: Object,
+});
 </script>
 
 <style lang="scss" scoped></style>

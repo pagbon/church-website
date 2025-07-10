@@ -9,9 +9,8 @@
             <div class="col-md-6">
               <figure class="rounded">
                 <img
-                  src="/assets/img/photos/g12.jpg"
-                  srcset="/assets/img/photos/g12@2x.jpg 2x"
-                  alt="image"
+                  :src="content.images[0].asset.url"
+                  :alt="content.images[0].alt || 'image'"
                 />
               </figure>
             </div>
@@ -20,9 +19,8 @@
               <figure class="rounded">
                 <img
                   style="object-fit: contain"
-                  src="/assets/img/photos/g13.jpg"
-                  srcset="/assets/img/photos/g13@2x.jpg 2x"
-                  alt="image"
+                  :src="content.images[1].asset.url"
+                  :alt="content.images[1].alt || 'image'"
                 />
               </figure>
             </div>
@@ -31,9 +29,8 @@
               <figure class="rounded mx-md-5">
                 <img
                   style="object-fit: contain"
-                  src="/assets/img/photos/g11.jpg"
-                  srcset="/assets/img/photos/g11@2x.jpg 2x"
-                  alt="image"
+                  :src="content.images[2].asset.url"
+                  :alt="content.images[2].alt || 'image'"
                 />
               </figure>
             </div>
@@ -46,9 +43,11 @@
           <h2
             class="fs-25 text-line text-gradient gradient-5 text-purple text-center"
           >
-            Who Are We?
+            {{ content?.heading }}
           </h2>
-          <p class="mb-4 leading">
+
+          <PortableText :value="content.body" />
+          <!-- <p class="mb-4 leading">
             We are a community of believers established by divine mandate, a
             place of perfection in God’s purpose. Since our first service on
             January 11, 2015, we have experienced continual growth, moving from
@@ -62,32 +61,38 @@
             we hold that Scripture equips us fully, leaving nothing lacking.
             Guided by the biblical significance of the City of David, we look to
             God’s Word to reveal His plan for His people and this city.
-          </p>
+          </p> -->
           <!--/.row -->
         </div>
         <!--/column -->
       </div>
       <!--/.row -->
       <div class="row gx-lg-8 gx-xl-12 gy-6 mb-7 mb-md-9">
-        <div v-for="(item, index) in features4" :key="index" class="col-lg-4">
+        <div
+          v-for="(item, index) in infoCard?.cards"
+          :key="index"
+          class="col-lg-4"
+        >
           <div class="d-flex flex-row">
             <div>
-              <div :class="item.iconClass">
-                <span class="number fs-18">{{ index + 1 }}</span>
+              <div :class="features4[index].iconClass">
+                <span class="number fs-18">{{ item.number || index + 1 }}</span>
               </div>
             </div>
             <div>
               <h3>{{ item.title }}</h3>
-              <p class="mb-2">{{ item.description }}</p>
+              <PortableText :value="item.description" />
               <router-link
-                v-if="item.link"
+                v-if="item.ctaRoute"
                 class="fs-14 btn btn-sm btn-outline-purple rounded-pill"
-                :to="item.link"
-                >Read more</router-link
+                :to="item.ctaRoute"
               >
+                {{ item.ctaText || "Read more" }}
+              </router-link>
             </div>
           </div>
         </div>
+
         <!--/column -->
       </div>
       <!--/.row -->
@@ -97,6 +102,11 @@
 
 <script setup>
 import { features4 } from "@/data/features";
+import { PortableText } from "@portabletext/vue";
+defineProps({
+  content: Object,
+  infoCard: Object,
+});
 </script>
 
 <style lang="scss" scoped></style>

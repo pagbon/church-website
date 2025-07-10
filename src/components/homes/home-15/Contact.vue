@@ -11,46 +11,45 @@
             style="top: -2rem; left: -1.4rem"
           ></div>
           <figure class="rounded">
-            <img style="object-fit: contain;"
-              src="/assets/img/photos/g11.jpg"
-              srcset="/assets/img/photos/g11@2x.jpg 2x"
+            <img
+              style="object-fit: contain"
+              :src="content.image.asset.url"
               alt="photo"
             />
           </figure>
         </div>
         <!--/column -->
         <div class="col-lg-6">
-          <img style="object-fit: contain;"
+          <img
+            style="object-fit: contain"
             src="/assets/img/icons/lineal/telemarketer.svg"
             class="icon-svg icon-svg-md mb-4"
             alt="photo"
           />
-          <h2 class="display-4 mb-8">
-            Reach Out and Connect.
-          </h2>
+          <h2 class="display-4 mb-8">{{ content.heading }}</h2>
           <div
-            v-for="item in contactInfo"
+            v-for="(item, id) in content.cards"
             :key="item.id"
             class="d-flex flex-row"
           >
             <div>
               <div class="icon text-primary fs-28 me-6 mt-n1">
-                <i :class="item.iconClass"></i>
+                <i :class="contactInfo[id].iconClass"></i>
               </div>
             </div>
             <div>
               <h5 class="mb-1">{{ item.title }}</h5>
 
-              <address v-if="item.address">
-                {{ item.address.line1 }}<br class="d-none d-md-block" />{{
-                  item.address.line2
-                }}
+              <address v-if="id === 0 || id === 1">
+                {{ item.description }}
               </address>
 
-              <p v-if="item.content">{{ item.content }}</p>
-              <a v-if="item.mail" :href="item.mail" class="link-body">{{
-                item.mail
-              }}</a>
+              <a
+                v-if="id === 2"
+                :href="`mailto:` + item.description"
+                class="link-body"
+                >{{ item.description }}</a
+              >
             </div>
           </div>
         </div>
@@ -66,6 +65,10 @@
 
 <script setup>
 import { contactInfo } from "@/data/contact";
+
+defineProps({
+  content: Object,
+});
 </script>
 
 <style lang="scss" scoped></style>
