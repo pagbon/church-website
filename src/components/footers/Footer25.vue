@@ -37,7 +37,7 @@
               </div>
               <div>
                 <h6 class="mb-1 text-yellow">Phone</h6>
-                <p class="mb-1 fs-13">1-403-401-5671</p>
+                <p class="mb-1 fs-13">+1-(587)-893-7927</p>
               </div>
             </div>
             <div class="d-flex flex-row my-1">

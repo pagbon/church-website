@@ -30,6 +30,7 @@
       v-if="getSection('gallerySection')"
       :content="getSection('gallerySection')"
     />
+    <HomesHome15Socials data-aos="fade-upu" />
     <HomesHome15Contact
       data-aos="fade-up"
       v-if="getSection('contactSection')"
