@@ -63,7 +63,7 @@
                   >info@rccgcityofdavidcalgary.com</a
                 >
                 <br />
-                1-403-401-5671 <br />
+                +1-(587)-893-7927 <br />
                 <nav class="nav social social-white mt-4">
                   <HeadersComponentsSocials />
                 </nav>
