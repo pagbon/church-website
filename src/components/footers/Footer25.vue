@@ -5,7 +5,8 @@
         <div class="col-lg-4">
           <div class="widget">
             <router-link to="/">
-              <img style="object-fit: contain;"
+              <img
+                style="object-fit: contain"
                 class="logo-dark img-fluid shadow"
                 src="/assets/img/logo.png"
                 srcset="/assets/img/logo@2x.png 2x"
@@ -37,7 +38,8 @@
               </div>
               <div>
                 <h6 class="mb-1 text-yellow">Phone</h6>
-                <p class="mb-1 fs-13">+1-(587)-893-7927</p>
+                <p class="mb-1 fs-13">
+                  {{ getSection("contactSection").cards[1].description }}</p>
               </div>
             </div>
             <div class="d-flex flex-row my-1">
@@ -48,7 +50,8 @@
               </div>
               <div>
                 <h6 class="mb-1 text-yellow">Email</h6>
-                <p class="mb-1 fs-13">info@rccgcityofdavidcalgary.com</p>
+                <p class="mb-1 fs-13">
+                  {{ getSection("contactSection").cards[2].description }}</p>
               </div>
             </div>
             <div class="d-flex flex-row my-1">
@@ -60,8 +63,7 @@
               <div>
                 <h6 class="mb-1 text-yellow">Address</h6>
                 <address class="mb-1 fs-13">
-                  Thorncliffe Greenview Community Association 5600 Centre Street
-                  North, Calgary, AB T2K 0T3
+                  {{ getSection("contactSection").cards[0].description }}
                 </address>
               </div>
             </div>
@@ -120,6 +122,20 @@
 <script setup>
 import CommonScrolltop from "@/components/common/Scrolltop.vue";
 import FootersComponentsSocials from "@/components/footers/components/Socials.vue";
+import { homePageQuery } from "@/sanity/queries/homePageQuery";
+import { client } from "@/sanity/sanityClient";
+import { ref, onMounted } from "vue";
+
+const homeContent = ref(null);
+
+onMounted(async () => {
+  const data = await client.fetch(homePageQuery);
+  console.log({ data });
+  homeContent.value = data.Sections || [];
+});
+
+const getSection = (type) =>
+  homeContent.value?.find((section) => section._type === type);
 </script>
 
 <style scoped>
