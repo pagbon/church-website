@@ -1,4 +1,4 @@
-<template>
+<template v-if="getSection('contactSection')">
   <footer class="bg-black">
     <div class="container pt-8 pt-md-10 pb-7">
       <div class="row gx-lg-0 gy-6">
@@ -25,9 +25,8 @@
               Read more
             </router-link>
           </div>
-          <!-- /.widget -->
         </div>
-        <!-- /column -->
+
         <div class="col-lg-4 offset-lg-1">
           <div class="widget">
             <div class="d-flex flex-row mb-1">
@@ -39,9 +38,11 @@
               <div>
                 <h6 class="mb-1 text-yellow">Phone</h6>
                 <p class="mb-1 fs-13">
-                  {{ getSection("contactSection").cards[1].description }}</p>
+                  {{ getSection("contactSection")?.cards[1]?.description }}
+                </p>
               </div>
             </div>
+
             <div class="d-flex flex-row my-1">
               <div>
                 <div class="icon text-yellow fs-25 me-4 mt-n1">
@@ -51,9 +52,11 @@
               <div>
                 <h6 class="mb-1 text-yellow">Email</h6>
                 <p class="mb-1 fs-13">
-                  {{ getSection("contactSection").cards[2].description }}</p>
+                  {{ getSection("contactSection")?.cards[2]?.description }}
+                </p>
               </div>
             </div>
+
             <div class="d-flex flex-row my-1">
               <div>
                 <div class="icon text-yellow fs-25 me-4 mt-n1">
@@ -63,15 +66,13 @@
               <div>
                 <h6 class="mb-1 text-yellow">Address</h6>
                 <address class="mb-1 fs-13">
-                  {{ getSection("contactSection").cards[0].description }}
+                  {{ getSection("contactSection")?.cards[0]?.description }}
                 </address>
               </div>
             </div>
-            <!--/div -->
           </div>
-          <!-- /.widget -->
         </div>
-        <!-- /column -->
+
         <div class="col-lg-3">
           <div class="widget">
             <div class="d-flex flex-row">
@@ -94,13 +95,10 @@
                 >
               </div>
             </div>
-            <!--/div -->
           </div>
-          <!-- /.widget -->
         </div>
-        <!-- /column -->
       </div>
-      <!--/.row -->
+
       <hr class="mt-10 mt-md-10 mb-3" />
 
       <div class="d-md-flex align-items-center justify-content-between">
@@ -111,10 +109,8 @@
         <nav class="nav social social-muted mb-0 text-md-end">
           <FootersComponentsSocials />
         </nav>
-        <!-- /.social -->
       </div>
     </div>
-    <!-- /.container -->
   </footer>
   <CommonScrolltop />
 </template>
@@ -126,16 +122,16 @@ import { homePageQuery } from "@/sanity/queries/homePageQuery";
 import { client } from "@/sanity/sanityClient";
 import { ref, onMounted } from "vue";
 
-const homeContent = ref(null);
+const homeContent = ref([]);
+
+const getSection = (type) =>
+  homeContent.value.find((section) => section._type === type);
 
 onMounted(async () => {
   const data = await client.fetch(homePageQuery);
-  console.log({ data });
-  homeContent.value = data.Sections || [];
+  homeContent.value = data?.Sections || [];
+  console.log("Contact Section:", getSection("contactSection"));
 });
-
-const getSection = (type) =>
-  homeContent.value?.find((section) => section._type === type);
 </script>
 
 <style scoped>

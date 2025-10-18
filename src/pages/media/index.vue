@@ -8,7 +8,7 @@
       description="Explore our library of sermons, worship music, and community moments."
     />
     <BlocksPortfolioPortfolio9 data-aos="fade-up" />
-    <FootersFooter25 data-aos="fade-up" />
+    <FootersFooter25 />
   </div>
 </template>
 

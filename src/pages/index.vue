@@ -30,14 +30,16 @@
       v-if="getSection('gallerySection')"
       :content="getSection('gallerySection')"
     />
-    <!-- <HomesHome15Socials data-aos="fade-upu" /> -->
+    <HomesHome15Socials data-aos="fade-upu" />
     <HomesHome15Contact
       data-aos="fade-up"
       v-if="getSection('contactSection')"
       :content="getSection('contactSection')"
     />
   </div>
-  <FootersFooter25 data-aos="fade-up" />
+  <FootersFooter25
+    data-aos="fade-up"
+  />
 </template>
 
 <script setup>
