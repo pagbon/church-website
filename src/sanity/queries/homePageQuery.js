@@ -31,6 +31,12 @@ export const homePageQuery = `
       heading,
       image{ asset->{url}, alt },
       paragraphs,
+      description,
+      title,
+      videoUrl,
+      isLive,
+      "thumbnail": thumbnail.asset->url,
+      date,
       description
     }
   }

@@ -1,11 +1,29 @@
 <template>
-  <section class="wrapper bg-light mt-12">
-    <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
-      <div class="">
-        <h4>Hello</h4>
+  <section
+    class="youtube-session bg-light py-10"
+  >
+    <div class="container text-center">
+      <h2 class="text-purple fw-bolder mb-4">{{ content.title }}</h2>
+      <p class="mb-6 fs-16">{{ content.description }}</p>
+      <div class="ratio ratio-16x9 mx-auto" style="max-width: 800px">
+        <iframe
+          :src="content.videoUrl.replace('watch?v=', 'embed/')"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+  content: Object,
+});
+</script>
+
+<style scoped>
+.youtube-session {
+  background: #fafafa;
+}
+</style>
