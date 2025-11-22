@@ -1,19 +1,21 @@
 export const homePageQuery = `
   *[_type == "homePage"][0]{
     title,
-    sections[]{
-      ...,
-      _type,
+    "sections": coalesce(
+      sections[]{
+        ...,
+        _type,
 
-      // Expand images for all section types
-      image{asset->{url}, alt},
-      topBannerImage{asset->{url}, alt},
-
-      slides[]{asset->{url}, alt},
-      images[]{asset->{url}, alt},
-
-      icon{asset->{url}, alt},
-      thumbnail{asset->{url}, alt}
-    }
+        // Expand images for all section types
+        image{asset->{url}, alt},
+        topBannerImage{asset->{url}, alt},
+        slides[]{asset->{url}, alt},
+        images[]{asset->{url}, alt},
+        icon{asset->{url}, alt},
+        thumbnail{asset->{url}, alt}
+      },
+      []
+    )
   }
 `;
+
