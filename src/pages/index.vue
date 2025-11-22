@@ -54,7 +54,7 @@ const homeContent = ref([]);
 onMounted(async () => {
   const data = await client.fetch(homePageQuery);
   console.log("homePage data FULL:", JSON.stringify(data, null, 2));
-  homeContent.value = data.Sections || [];
+  homeContent.value = data.sections || [];
 });
 
 const getSection = (type) =>
