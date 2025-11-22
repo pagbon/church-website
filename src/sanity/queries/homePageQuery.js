@@ -5,7 +5,7 @@ export const homePageQuery = `
       ...,
       _type,
 
-      // Common image expansions so Vue can use .asset.url safely
+      // Image helpers so Vue can safely use .asset.url
       image{
         asset->{ url },
         alt
