@@ -4,10 +4,6 @@ export const client = createClient({
   projectId: "k06kgk7u",
   dataset: "production",
   useCdn: true,
-  apiVersion: "2025-07-01",
+  apiVersion: "2025-11-22",
 });
 
-export async function getHomePage() {
-  const query = `*[_type == "homeType"][0]`;
-  return await client.fetch(query);
-}
