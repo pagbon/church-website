@@ -45,16 +45,16 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import { homePageQuery } from "@/sanity/queries/homePageQuery";
 import { client } from "@/sanity/sanityClient";
-import { ref, onMounted } from "vue";
 
-const homeContent = ref(null);
+const homeContent = ref([]);
 
 onMounted(async () => {
   const data = await client.fetch(homePageQuery);
-  console.log({ data });
-  homeContent.value = data.Sections || [];
+  console.log("homePage data:", data);
+  homeContent.value = data.sections || [];
 });
 
 const getSection = (type) =>
@@ -62,3 +62,4 @@ const getSection = (type) =>
 </script>
 
 <style lang="scss" scoped></style>
+
