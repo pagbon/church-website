@@ -1,6 +1,13 @@
 <template>
   <section class="wrapper bg-dark">
-    <div class="swiper-container swiper-hero dots-over">
+    <div v-if="content?.topBannerImage?.asset?.url" class="hero-top-banner">
+      <img
+        :src="content.topBannerImage.asset.url"
+        class="w-100"
+        style="max-height: 220px; object-fit: cover;"
+      />
+    </div>
+     <div class="swiper-container swiper-hero dots-over">
       <Swiper
         :space-between="0"
         :pagination="{ el: '.pagihero1', clickable: true }"
