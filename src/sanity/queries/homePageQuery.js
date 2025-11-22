@@ -1,8 +1,11 @@
 export const homePageQuery = `
   *[_type == "homePage"][0]{
     title,
-    Sections[]{
+    sections[]{
       _type,
+      topBannerImage{
+        asset->{ url }
+      },
       heroText,
       subtitle,
       ctaText,
