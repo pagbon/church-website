@@ -6,15 +6,15 @@
         :src="content.topBannerImage.asset.url"
         class="w-100"
         style="max-height: 220px; object-fit: cover;"
-         alt="Hero top banner"
+        alt="Hero top banner"
       />
     </div>
-    
+
     <!-- Only render Swiper if we have at least one slide -->
     <div
       v-if="content?.slides && content.slides.length"
       class="swiper-container swiper-hero dots-over"
-    > 
+    >
       <Swiper
         :space-between="0"
         :pagination="{ el: '.pagihero1', clickable: true }"
@@ -32,7 +32,7 @@
             class="swiper-slide bg-dark bg-image"
             :class="{ 'bg-overlay bg-overlay-400': index > 0 }"
             :style="{
-              backgroundImage: slide.asset?.url
+              backgroundImage: slide?.asset?.url
                 ? `url(${slide.asset.url})`
                 : 'none',
             }"
@@ -116,4 +116,3 @@ defineProps({
 
 <style lang="scss" scoped></style>
 
-        
