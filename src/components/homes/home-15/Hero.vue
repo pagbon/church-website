@@ -29,8 +29,7 @@
           :key="slide._key || index"
         >
           <div
-            class="swiper-slide bg-dark bg-image"
-            :class="{ 'bg-overlay bg-overlay-400': index > 0 }"
+            class="swiper-slide bg-dark bg-overlay bg-overlay-400 bg-image"
             :style="{
               backgroundImage: slide?.asset?.url
                 ? `url(${slide.asset.url})`
