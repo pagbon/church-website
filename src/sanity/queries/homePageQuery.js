@@ -1,7 +1,7 @@
 export const homePageQuery = `
   *[_type == "homePage"][0]{
     title,
-    "sections": coalesce(
+    "Sections": coalesce(
       sections[]{
         ...,
         _type,
