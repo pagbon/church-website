@@ -1,16 +1,46 @@
 export const homePageQuery = `
-*[_type == "homeType"][0]{
-  title,
-  sections[] {
-    ...,
-    _type,
-    image{asset->{url}, alt},
-    topBannerImage{asset->{url}, alt},
-    slides[]{asset->{url}, alt},
-    images[]{asset->{url}, alt},
-    icon{asset->{url}, alt},
-    thumbnail{asset->{url}, alt}
+  *[_type == "homePage"][0]{
+    title,
+    Sections[]{                 
+      _type,
+      topBannerImage{
+        asset->{ url }
+      },
+      heroText,
+      subtitle,
+      ctaText,
+      ctaRoute,
+      slides[]{
+        asset->{ url },
+        alt
+      },
+      images[]{
+        asset->{ url },
+        alt
+      },
+      items[]{
+        title,
+        description,
+        linkText,
+        linkUrl
+      },
+      cards[]{
+        icon{ asset->{ url }, alt },
+        title,
+        description
+      },
+      body[]{ ..., children[]{ ..., marks[] } },
+      intro[]{ ..., children[]{ ..., marks[] } },
+      heading,
+      image{ asset->{ url }, alt },
+      paragraphs,
+      description,
+      title,
+      videoUrl,
+      isLive,
+      thumbnail{ asset->{ url }, alt },
+      date
+    }
   }
-}
 `;
 
