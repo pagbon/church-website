@@ -41,7 +41,7 @@
       :content="getSection('contactSection')"
     />
   </div>
-  <FootersFooter25 data-aos="fade-up" />
+  <FootersFooter25 />
 </template>
 
 <script setup>
@@ -58,7 +58,7 @@ onMounted(async () => {
 });
 
 const getSection = (type) =>
-  homeContent.value?.find((section) => section._type === type);
+  homeContent.value?.find((section) => section?._type === type);
 </script>
 
 <style lang="scss" scoped></style>
