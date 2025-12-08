@@ -11,16 +11,14 @@ import FootersComponentsSocials from "@/components/footers/components/Socials.vu
 import HeadersHeader16 from "@/components/headers/Header16.vue";
 import HeadersHeader1 from "@/components/headers/Header1.vue";
 import HomesHome15Hero from "@/components/homes/home-15/Hero.vue";
+import HomesHome15WeMoving from "@/components/homes/home-15/WeMoving.vue";
 import HomesHome15Contact from "@/components/homes/home-15/Contact.vue";
 import HomesHome15Count from "@/components/homes/home-15/Count.vue";
 import HomesHome15Features from "@/components/homes/home-15/Features.vue";
 import HomesHome15Team from "@/components/homes/home-15/Team.vue";
 import HomesHome15Steps from "@/components/homes/home-15/Steps.vue";
 import HomesHome15Testimonials from "@/components/homes/home-15/Testimonials.vue";
-import HomesHome15Socials from "@/components/homes/home-15/SocialMedia.vue"
-
-
-
+import HomesHome15Socials from "@/components/homes/home-15/SocialMedia.vue";
 
 export const globalRegisTrationComponents = (app) => {
   app
@@ -42,21 +40,7 @@ export const globalRegisTrationComponents = (app) => {
     .component("HomesHome15Steps", HomesHome15Steps)
     .component("HomesHome15Team", HomesHome15Team)
     .component("HomesHome15Testimonials", HomesHome15Testimonials)
-    .component("HomesHome15Features", HomesHome15Features) 
-    .component("HomesHome15Socials", HomesHome15Socials) 
+    .component("HomesHome15Features", HomesHome15Features)
+    .component("HomesHome15Socials", HomesHome15Socials)
+    .component("HomesHome15WeMoving", HomesHome15WeMoving);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

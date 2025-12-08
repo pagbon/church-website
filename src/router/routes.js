@@ -46,11 +46,19 @@ export const routes = [
     },
   },
   {
+    path: "/we-are-moving",
+    name: "we-are-moving",
+    component: () => import("@/pages/we-are-moving/index.vue"),
+    meta: {
+      title: "We Are Moving || RCCG City of David",
+    },
+  },
+  {
     path: "/contact",
     name: "contact",
     component: () => import("@/pages/contact2/index.vue"),
     meta: {
-      title: "Contact || Sandbox - Modern & Multipurpose Vue 3 Template",
+      title: "Contact || RCCG City of David",
     },
   },
 
@@ -59,7 +67,7 @@ export const routes = [
     name: "NotFound",
     component: () => import("@/pages/404/index.vue"),
     meta: {
-      title: "Page Not Found || Sandbox - Modern & Multipurpose Vue 3 Template",
+      title: "Page Not Found || RCCG City of David",
     },
   },
 ];

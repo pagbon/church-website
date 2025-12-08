@@ -31,6 +31,7 @@ export const homePageQuery = `
       heading,
       image{ asset->{url}, alt },
       paragraphs,
+      paragraph,
       description,
       title,
       videoUrl,
