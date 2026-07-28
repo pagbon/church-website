@@ -25,12 +25,12 @@
               :key="i"
               class="project item col-md-6 col-xl-3"
             >
-              <figure class="rounded mb-6">
+              <figure class="rounded mb-6 h-[400px] overflow-hidden">
                 <img
                   style="object-fit: contain"
                   :src="project.image.asset.url"
                   :alt="project.image.alt || 'photo'"
-                  class="img-thumbnail"
+                  class="img-thumbnail h-full w-full object-cover object-top"
                 />
               </figure>
               <div
