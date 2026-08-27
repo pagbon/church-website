@@ -25,12 +25,11 @@
               :key="i"
               class="project item col-md-6 col-xl-3"
             >
-              <figure class="rounded mb-6 h-[400px] overflow-hidden">
+              <figure class="rounded mb-6 leader-photo">
                 <img
-                  style="object-fit: contain"
                   :src="project.image.asset.url"
                   :alt="project.image.alt || 'photo'"
-                  class="img-thumbnail h-full w-full object-cover object-top"
+                  class="img-thumbnail"
                 />
               </figure>
               <div
@@ -113,4 +112,23 @@ const setActiveLightBox = (val, i) => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.leader-photo {
+  height: 380px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .leader-photo {
+    height: 320px;
+  }
+}
+</style>
